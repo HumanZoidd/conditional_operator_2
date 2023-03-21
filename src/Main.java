@@ -49,18 +49,15 @@ public class Main {
 
     public static void task4() {
         System.out.println("Задача 4");
-        byte deliveryDistance = 20;
-        if (deliveryDistance < 20) {
-            System.out.println("Досавка карты займёт 1 сутки");
+        byte deliveryDistance = 95;
+        int deliveryDistanceDay = 1;
+        if (deliveryDistance > 20) {
+            deliveryDistanceDay++;
         }
-        if (deliveryDistance <= 60 && deliveryDistance >= 20) {
-            System.out.println("Доставка карты займёт 2 суток");
+        if (deliveryDistance > 60) {
+            deliveryDistanceDay++;
         }
-        if (deliveryDistance > 60 && deliveryDistance <= 100) {
-            System.out.println("Доставка карты займет 3 суток");
-        } else if (deliveryDistance > 100) {
-            System.out.println("Доставка карты невозможна");
-        }
+        System.out.println("Доставка карты займет : " + deliveryDistanceDay + " дня");
     }
 
     public static void task5() {
